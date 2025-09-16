@@ -3,7 +3,7 @@ name: Scheduler
 on:
   # Schedule: daily at 7:00 AM IST (1:30 AM UTC)
   schedule:
-    - cron: "5 13 * * *"
+    - cron: "*/5 * * * *"
   # Allows manual run from GitHub UI
   workflow_dispatch:
 
