@@ -3,7 +3,7 @@ name: Scheduler
 on:
   # Schedule: daily at 7:00 AM IST (1:30 AM UTC)
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 14 * * *"
   # Allows manual run from GitHub UI
   workflow_dispatch:
 
@@ -27,7 +27,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
+      # Log the trigger time
+      - name: Log trigger time
+        run: |
+          echo "Workflow triggered at:"
+          date
       # Step 4: Run the news agent script
       - name: Run AI News Agent
         env:
