@@ -3,7 +3,7 @@ name: Daily AI Digest
 on:
   # Schedule: daily at 7:00 AM IST (1:30 AM UTC)
   schedule:
-    - cron: "50 0 * * *"
+    - cron: "50 12 * * *"
   # Allows manual run from GitHub UI
   workflow_dispatch:
 
